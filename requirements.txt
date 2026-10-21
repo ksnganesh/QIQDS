@@ -1,0 +1,6 @@
+qiskit>=1.0          # developed and tested with 2.6.0
+qiskit-aer>=0.14     # tested with 0.17.2 (only needed for the "aer" back end)
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8      # only for scripts/plot_signature_rates.py
+pytest>=8

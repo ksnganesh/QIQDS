@@ -1,0 +1,68 @@
+{
+ "nadlinger": {
+  "standard": {
+   "name": "Nadlinger et al., Nature 607, 682 (ions, 2 m)",
+   "variant": "standard",
+   "n_min": 950384.2371661214,
+   "hours_needed": 5.005356982408239,
+   "rounds_collected": 1500000.0,
+   "hours_collected": 7.9,
+   "ell_at_collected": 135158.7573797712,
+   "feasible_with_collected": 1.0
+  },
+  "rkm_sifted": {
+   "name": "Nadlinger et al., Nature 607, 682 (ions, 2 m)",
+   "variant": "rkm_sifted",
+   "n_min": 2460757.78719396,
+   "hours_needed": 12.959991012554857,
+   "rounds_collected": 1500000.0,
+   "hours_collected": 7.9,
+   "ell_at_collected": -89106.21828099823,
+   "feasible_with_collected": 0.0
+  }
+ },
+ "zhang": {
+  "standard": {
+   "name": "Zhang et al., Nature 607, 687 (Rb atoms, 400 m)",
+   "variant": "standard",
+   "n_min": 25813145.454207353,
+   "hours_needed": 579289.6197084235,
+   "rounds_collected": 3342.0,
+   "hours_collected": 75.0,
+   "ell_at_collected": -16206.536601770764,
+   "feasible_with_collected": 0.0
+  },
+  "rkm_sifted": {
+   "name": "Zhang et al., Nature 607, 687 (Rb atoms, 400 m)",
+   "variant": "rkm_sifted",
+   "n_min": 52688782.254822224,
+   "hours_needed": 1182423.300153102,
+   "rounds_collected": 3342.0,
+   "hours_collected": 75.0,
+   "ell_at_collected": -10811.500783577678,
+   "feasible_with_collected": 0.0
+  }
+ },
+ "lu": {
+  "standard": {
+   "name": "Lu et al., Science 391, 592 (Rb atoms, 11 km)",
+   "variant": "standard",
+   "n_min": 2169624.8707494196,
+   "hours_needed": 1120.7333769434088,
+   "rounds_collected": 1208000.0,
+   "hours_collected": 624.0,
+   "ell_at_collected": -114841.52143412395,
+   "feasible_with_collected": 0.0
+  },
+  "rkm_sifted": {
+   "name": "Lu et al., Science 391, 592 (Rb atoms, 11 km)",
+   "variant": "rkm_sifted",
+   "n_min": 5539598.257188167,
+   "hours_needed": 2861.5143315276628,
+   "rounds_collected": 1208000.0,
+   "hours_collected": 624.0,
+   "ell_at_collected": -197432.997736017,
+   "feasible_with_collected": 0.0
+  }
+ }
+}
