@@ -7,7 +7,7 @@
    "hours_needed": 5.005356982408239,
    "rounds_collected": 1500000.0,
    "hours_collected": 7.9,
-   "ell_at_collected": 135158.7573797712,
+   "ell_at_collected": 135158.75737977144,
    "feasible_with_collected": 1.0
   },
   "rkm_sifted": {
@@ -17,7 +17,7 @@
    "hours_needed": 12.959991012554857,
    "rounds_collected": 1500000.0,
    "hours_collected": 7.9,
-   "ell_at_collected": -89106.21828099823,
+   "ell_at_collected": -89106.21828099876,
    "feasible_with_collected": 0.0
   }
  },
@@ -29,7 +29,7 @@
    "hours_needed": 579289.6197084235,
    "rounds_collected": 3342.0,
    "hours_collected": 75.0,
-   "ell_at_collected": -16206.536601770764,
+   "ell_at_collected": -17903.986445688563,
    "feasible_with_collected": 0.0
   },
   "rkm_sifted": {
@@ -39,7 +39,7 @@
    "hours_needed": 1182423.300153102,
    "rounds_collected": 3342.0,
    "hours_collected": 75.0,
-   "ell_at_collected": -10811.500783577678,
+   "ell_at_collected": -10811.500783607535,
    "feasible_with_collected": 0.0
   }
  },
@@ -51,7 +51,7 @@
    "hours_needed": 1120.7333769434088,
    "rounds_collected": 1208000.0,
    "hours_collected": 624.0,
-   "ell_at_collected": -114841.52143412395,
+   "ell_at_collected": -114841.52143412412,
    "feasible_with_collected": 0.0
   },
   "rkm_sifted": {
@@ -61,7 +61,7 @@
    "hours_needed": 2861.5143315276628,
    "rounds_collected": 1208000.0,
    "hours_collected": 624.0,
-   "ell_at_collected": -197432.997736017,
+   "ell_at_collected": -197432.9977359546,
    "feasible_with_collected": 0.0
   }
  }
