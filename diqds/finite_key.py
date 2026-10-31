@@ -333,6 +333,56 @@ def maximize_key_length(n: int, S: float, Q: float, p: Optional[float] = 0.0,
     return ell, kp, extras
 
 
+def maximize_key_length_over_p(n: int, S: float, Q: float, budget: SecurityBudget = SecurityBudget(),
+                               ec_model: str = "sifted", key_weight: float = 0.5, z0=None, p0: Optional[float] = None,
+                               width: float = 0.06, p_max: float = 0.30, p_tol: float = 2e-3, restarts: int = 1):
+    """Eq. (9) maximised over everything INCLUDING the noisy-preprocessing probability p, with p searched by an outer
+    bounded 1-D minimiser and every inner problem solved at fixed p.
+
+    Why not maximize_key_length(..., p=None)?  There p is one more coordinate of the Nelder-Mead search, and a warm start
+    from a low-noise point (where the best p is ~0, e.g. inside the bisection of min_visibility) can stay in the p ~ 0
+    basin: V_min(p=None) came out 0.8699 at n = 6.5e8 but 0.8601 at n = 1e9, whereas the true optimum is smooth in n.
+    p0 / width narrow the search to [p0 - width, p0 + width] (use the previous optimum along a sweep); z0 warm-starts the
+    fixed-p problems.  Returns (ell, KeyParams, extras) like maximize_key_length; extras["p"] is the optimal p."""
+    from scipy.optimize import minimize_scalar
+
+    lo, hi = (0.0, p_max) if p0 is None else (max(0.0, p0 - width), min(p_max, p0 + width))
+    best = dict(ell=-math.inf, out=None, z=z0)
+
+    def f(pp):
+        zz = best["z"]
+        ell, kp, ex = maximize_key_length(n, S, Q, float(pp), budget, ec_model, restarts=restarts,
+                                          key_weight=key_weight, z0=zz)
+        if ell > best["ell"]:
+            best.update(ell=ell, out=(ell, kp, ex), z=ex["z"])
+        return -ell if math.isfinite(ell) else 1e30
+
+    minimize_scalar(f, bounds=(lo, hi), method="bounded", options=dict(xatol=p_tol))
+    for edge in (0.0, p_max):                                   # the bounded method never evaluates the end points
+        if lo <= edge <= hi:
+            f(edge)
+    ell, kp, ex = best["out"]
+    ex["p"] = kp.p if hasattr(kp, "p") else None
+    return ell, kp, ex
+
+
+def min_visibility_over_p(n: int, v_lo: float = 0.82, v_hi: float = 0.97, tol: float = 2e-5, ell_min: float = 0.0, **kw) -> float:
+    """min_visibility with p optimised by maximize_key_length_over_p (robust; ~12 x slower than fixed p)."""
+    ell_hi, _, ex = maximize_key_length_over_p(n, *werner_S_Q(v_hi), **kw)
+    if ell_hi <= ell_min:
+        return math.nan
+    z, p0 = ex["z"], ex.get("p")
+    lo, hi = v_lo, v_hi
+    while hi - lo > tol:
+        mid = 0.5 * (lo + hi)
+        ell, _, ex = maximize_key_length_over_p(n, *werner_S_Q(mid), z0=z, p0=None if p0 is None else p0, width=0.08, **kw)
+        if ell > ell_min:
+            hi, z, p0 = mid, ex["z"], ex.get("p")
+        else:
+            lo = mid
+    return 0.5 * (lo + hi)
+
+
 def min_visibility(n: int, p: Optional[float] = 0.0, v_lo: float = 0.80, v_hi: float = 0.97,
                    tol: float = 1e-5, ell_min: float = 0.0, **kw) -> float:
     """Smallest Werner visibility V for which the optimised key length of Eq. (9) exceeds `ell_min`.

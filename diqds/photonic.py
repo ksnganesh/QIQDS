@@ -84,6 +84,23 @@ def channel_efficiency(L_km: float, eta_conv: float = 0.5, L0_km: float = 22.0) 
     return eta_conv * math.exp(-L_km / (2.0 * L0_km))
 
 
+HERALDING_SCALE = 0.3
+
+
+def heralding_probability(L_km: float, T: float = 0.01, eta_conv: float = 0.5, L0_km: float = 22.0,
+                          p_bsm: float = 0.5, scale: float = HERALDING_SCALE) -> float:
+    """P_H of one round of the all-photonic scheme of Fig. 1(b).  The paper does not print P_H, so this is a MODEL:
+        P_H = scale * [2 T (1 - T)]^2 * eta_C(L)^2 * p_bsm,
+    where [2T(1-T)]^2 is the chance that each station sends exactly one of its two photons to the heralding station,
+    eta_C is Eq. (D2) and p_bsm = 1/2 is the linear-optics Bell-measurement success probability.
+    scale = 1 is that naive count; it puts the ideal-source curve of the paper's Fig. 7 a factor ~2 too high at every
+    distance.  scale = 0.3 is a CALIBRATION on the printed ideal-source curves (20 readings, N = 1e14 and 2e14: mean
+    deviation 0 %, rms 8.5 %), not something derived.  The distance dependence exp(-L / L0) needs no calibration: it makes
+    the paper's two ideal-source limits (111.46 km at N = 1e14, 126.53 km at N = 2e14) correspond to the same number of
+    heralded rounds to within 1 %."""
+    return scale * (2.0 * T * (1.0 - T)) ** 2 * channel_efficiency(L_km, eta_conv, L0_km) ** 2 * p_bsm
+
+
 def heralded_rounds(N: float, P_H: float) -> float:
     """Eq. (D3): n_H = P_H N."""
     return P_H * N

@@ -63,7 +63,7 @@ def part_fig4b():
 
 def part_fig3():
     out = {"n_min": {}, "slope": {}}
-    for V in (0.99, 0.95, 0.92, 0.90):
+    for V in (1.0, 0.96, 0.92, 0.88):          # the visibilities in the legend of the paper's Fig. 3
         S, Q = werner_S_Q(V)
         out["n_min"][str(V)] = minimum_rounds(S, Q, RKM_SIFTED, p=0.0, lo=1e5, hi=1e11, ratio=1.05)
         r1 = signature_rate_werner(10 ** 10, V, RKM_SIFTED, p=0.0, restarts=2)["r_sig"]
@@ -177,7 +177,7 @@ def report():
     P("\nVerdict: **reproduced**. The threshold falls monotonically with p; at V = 0.96 the rate drops from 2.1e7 (p = 0) to 1.2e7 (p = 0.1); at V = 0.856 only p >= 0.05 yields a signature.\n")
     P("**Fig. 3: threshold, then ~linear growth (p = 0).**\n")
     P("| V | minimum rounds | log-log slope of r_sig (1e10 -> 1e11) |\n|---|---|---|")
-    for V in ("0.99", "0.95", "0.92", "0.9"):
+    for V in ("1.0", "0.96", "0.92", "0.88"):
         P(f"| {V} | {f3['n_min'][V]:.3g} | {f3['slope'][V]:.3f} |")
     P("\nVerdict: **reproduced qualitatively** (the paper gives no numbers for Fig. 3): lower V needs more rounds; beyond the threshold the slope is 1.0-1.03, i.e. linear in n.\n")
     P("## 2. Matter-qubit experiments (Fig. 6)\n")

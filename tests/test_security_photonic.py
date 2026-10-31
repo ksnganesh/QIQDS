@@ -36,3 +36,10 @@ def test_hom_models_and_bookkeeping():
     assert hom_visibility_remote(1.0, 0.3, 0.5) < hom_visibility_local(1.0, 0.3)
     assert acquisition_hours(1e14, 75e6) == pytest.approx(370.4, abs=0.1)     # paper: ~370 h
     assert channel_efficiency(0) == pytest.approx(0.5)
+
+
+def test_heralding_probability_is_consistent_with_the_two_ideal_cutoffs():
+    from diqds.photonic import heralding_probability as PH
+    # 111.46 km at N = 1e14 and 126.53 km at N = 2e14 (paper, Sec. IV) need the same number of heralded rounds, to 1 %
+    assert 1e14 * PH(111.46) == pytest.approx(2e14 * PH(126.53), rel=0.01)
+    assert PH(0.0, scale=1.0) == pytest.approx(0.25 * (2 * 0.01 * 0.99) ** 2 * 0.5)      # naive count at L = 0
