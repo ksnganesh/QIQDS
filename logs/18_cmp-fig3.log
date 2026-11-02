@@ -1,0 +1,4 @@
+V=1.0: n_min = 8.43e+05, log-log slope r_sig(1e10 -> 1e11) = 1.010
+V=0.96: n_min = 2.29e+06, log-log slope r_sig(1e10 -> 1e11) = 1.012
+V=0.92: n_min = 8.82e+06, log-log slope r_sig(1e10 -> 1e11) = 1.020
+V=0.88: n_min = 1.38e+08, log-log slope r_sig(1e10 -> 1e11) = 1.060

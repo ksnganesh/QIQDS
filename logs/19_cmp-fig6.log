@@ -1,0 +1,6 @@
+nadlinger standard   n_min = 9.504e+05  hours = 5.005  ell(collected) = 135159
+nadlinger rkm_sifted n_min = 2.461e+06  hours = 12.96  ell(collected) = -89106
+zhang     standard   n_min = 2.581e+07  hours = 5.793e+05  ell(collected) = -17904
+zhang     rkm_sifted n_min = 5.269e+07  hours = 1.182e+06  ell(collected) = -10812
+lu        standard   n_min = 2.17e+06  hours = 1121  ell(collected) = -114842
+lu        rkm_sifted n_min = 5.54e+06  hours = 2862  ell(collected) = -197433

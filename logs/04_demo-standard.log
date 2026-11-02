@@ -1,0 +1,22 @@
+security (Table I): eps=1e-10, eps_snd=5e-11, n_m=1000 -> n_s = 46 (138 key bits per signature and link)
+plan: n=1,000,000  gamma=0.0953  p=0.0000  omega_thr=0.84628  EC_max=149,192  tag=61 bits  ->  ell=226,058 secret bits (0.2261 per round)
+
+[Alice-Bob] ACCEPTED   (0.4s, backend=exact)
+   test rounds 95,306  CHSH losses 14,270 <= 14,647   S_hat = 2.802   QBER(key) = 0.0049
+   EC leakage 140,468 <= EC_max 149,192   verification hash ok = True
+   secret key: 226,058 bits, Alice/partner copies equal = True
+
+[Alice-Charlie] ACCEPTED   (0.4s, backend=exact)
+   test rounds 95,396  CHSH losses 14,541 <= 14,647   S_hat = 2.781   QBER(key) = 0.0050
+   EC leakage 141,485 <= EC_max 149,192   verification hash ok = True
+   secret key: 226,058 bits, Alice/partner copies equal = True
+
+signature capacity of this execution: 1638  (r_sig = ell/(3 n_s) = 1638.1)
+
+-- messaging stage (Fig. 2)
+   Transfer 100 EUR to Bob      Bob accepts: True   Charlie accepts: True
+   Contract v2 - final          Bob accepts: True   Charlie accepts: True
+   Bob forwards a modified document -> Charlie accepts: False   (forgery rejected)
+
+-- sanity: devices without entanglement
+    aborted: CHSH test failed: 24,006 losses > 14,647 allowed (S_hat = 1.990)

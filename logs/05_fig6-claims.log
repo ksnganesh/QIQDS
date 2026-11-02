@@ -1,0 +1,19 @@
+n_s = 46  (Table I)
+
+Nadlinger et al., Nature 607, 682 (ions, 2 m)
+   S=2.677, Q=0.0144, collected 1,500,000 rounds in 7.9 h
+   paper: 1.5e6 rounds (~8 h) are within the acceptable range -> feasible
+   [standard  ] n_min =       950,384  ->           5 h at the experiment's rate;  ell at collected n =    135,159  (feasible)
+   [rkm_sifted] n_min =     2,460,758  ->          13 h at the experiment's rate;  ell at collected n =    -89,106  (not enough rounds)
+
+Zhang et al., Nature 607, 687 (Rb atoms, 400 m)
+   S=2.578, Q=0.0779, collected 3,342 rounds in 75 h
+   paper: would need 'on the order of 1e7 hours' (3342 rounds per 75 h)
+   [standard  ] n_min =    25,813,145  ->     579,290 h at the experiment's rate;  ell at collected n =    -17,904  (not enough rounds)
+   [rkm_sifted] n_min =    52,688,782  ->   1,182,423 h at the experiment's rate;  ell at collected n =    -10,812  (not enough rounds)
+
+Lu et al., Science 391, 592 (Rb atoms, 11 km)
+   S=2.612, Q=0.0285, collected 1,208,000 rounds in 624 h
+   paper: more than the collected 1.2e6 rounds needed; positive at 2.4e6 (~1248 h)
+   [standard  ] n_min =     2,169,625  ->       1,121 h at the experiment's rate;  ell at collected n =   -114,842  (not enough rounds)
+   [rkm_sifted] n_min =     5,539,598  ->       2,862 h at the experiment's rate;  ell at collected n =   -197,433  (not enough rounds)

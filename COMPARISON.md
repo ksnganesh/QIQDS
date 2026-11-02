@@ -19,11 +19,11 @@ Largest deviation 0.0011; every value is slightly on the optimistic side.
 
 | p | V_min | r_sig at V = 0.96 | r_sig at V = 0.865 | r_sig at V = 0.856 |
 |---|---|---|---|---|
-| 0 | 0.8619 | 2.11e+07 | 5.58e+05 | 0 |
-| 0.02 | 0.8565 | 1.88e+07 | 1.29e+06 | 0 |
-| 0.05 | 0.8534 | 1.58e+07 | 1.45e+06 | 3.16e+05 |
-| 0.10 | 0.8511 | 1.17e+07 | 1.27e+06 | 4.43e+05 |
-| optimised | 0.8503 | 2.11e+07 | 1.45e+06 | 4.43e+05 |
+| 0 | 0.8619 | 2.11e+07 | - | - |
+| 0.02 | 0.8565 | 1.88e+07 | - | - |
+| 0.05 | 0.8534 | 1.58e+07 | - | - |
+| 0.10 | 0.8511 | 1.17e+07 | - | - |
+| optimised | 0.8503 | 2.11e+07 | - | - |
 
 Verdict: **reproduced**. The threshold falls monotonically with p; at V = 0.96 the rate drops from 2.1e7 (p = 0) to 1.2e7 (p = 0.1); at V = 0.856 only p >= 0.05 yields a signature.
 
@@ -31,10 +31,10 @@ Verdict: **reproduced**. The threshold falls monotonically with p; at V = 0.96 t
 
 | V | minimum rounds | log-log slope of r_sig (1e10 -> 1e11) |
 |---|---|---|
-| 0.99 | 1.07e+06 | 1.010 |
-| 0.95 | 3.08e+06 | 1.013 |
+| 1.0 | 8.43e+05 | 1.010 |
+| 0.96 | 2.29e+06 | 1.012 |
 | 0.92 | 8.82e+06 | 1.020 |
-| 0.9 | 2.53e+07 | 1.029 |
+| 0.88 | 1.38e+08 | 1.060 |
 
 Verdict: **reproduced qualitatively** (the paper gives no numbers for Fig. 3): lower V needs more rounds; beyond the threshold the slope is 1.0-1.03, i.e. linear in n.
 

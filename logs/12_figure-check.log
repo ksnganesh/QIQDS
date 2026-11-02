@@ -1,0 +1,140 @@
+
+**Fig. 3 (p = 0): rate at fixed n, and n at which a given rate is reached**
+
+| curve | quantity | code | paper (read) | code / paper |
+|---|---|---|---|---|
+| V = 1 | r_sig(n = 1e+08) | 2.923e+05 | 2.93e+05 | 0.998 |
+| V = 1 | r_sig(n = 1e+09) | 3.292e+06 | 3.29e+06 | 1.001 |
+| V = 1 | n at r_sig = 1e+02 | 9.092e+05 | 9.54e+05 | 0.953 |
+| V = 1 | n at r_sig = 1e+03 | 1.48e+06 | 1.53e+06 | 0.968 |
+| V = 1 | n at r_sig = 1e+04 | 5.621e+06 | 5.74e+06 | 0.979 |
+| V = 0.96 | r_sig(n = 1e+08) | 1.676e+05 | 1.68e+05 | 0.997 |
+| V = 0.96 | r_sig(n = 1e+09) | 1.981e+06 | 1.98e+06 | 1.001 |
+| V = 0.96 | n at r_sig = 1e+02 | 2.368e+06 | 2.5e+06 | 0.947 |
+| V = 0.96 | n at r_sig = 1e+03 | 3.311e+06 | 3.44e+06 | 0.963 |
+| V = 0.96 | n at r_sig = 1e+04 | 1.033e+07 | 1.06e+07 | 0.974 |
+| V = 0.92 | r_sig(n = 1e+08) | 7.411e+04 | 7.43e+04 | 0.997 |
+| V = 0.92 | r_sig(n = 1e+09) | 1.024e+06 | 1.03e+06 | 0.994 |
+| V = 0.92 | n at r_sig = 1e+02 | 8.972e+06 | 9.57e+06 | 0.937 |
+| V = 0.92 | n at r_sig = 1e+03 | 1.076e+07 | 1.14e+07 | 0.944 |
+| V = 0.92 | n at r_sig = 1e+04 | 2.482e+07 | 2.54e+07 | 0.977 |
+| V = 0.88 | r_sig(n = 1e+09) | 2.186e+05 | 2.15e+05 | 1.017 |
+| V = 0.88 | n at r_sig = 1e+03 | 1.414e+08 | 1.51e+08 | 0.937 |
+| V = 0.88 | n at r_sig = 1e+04 | 1.929e+08 | 2.04e+08 | 0.945 |
+
+**Fig. 4 (n = 1e10): rate at fixed V, and V_min**
+
+| curve | quantity | code | paper (read) | code / paper |
+|---|---|---|---|---|
+| p = 0 | r_sig(V = 0.9) | 7.233e+06 | 7.13e+06 | 1.014 |
+| p = 0 | r_sig(V = 0.96) | 2.11e+07 | 2.09e+07 | 1.009 |
+| p = 0 | r_sig(V = 0.995) | 3.264e+07 | 3.21e+07 | 1.017 |
+| p = 0 | V_min | 0.8619 | 0.8622 | 1.000 |
+| p = 0.05 | r_sig(V = 0.9) | 6.152e+06 | 6.05e+06 | 1.017 |
+| p = 0.05 | r_sig(V = 0.96) | 1.575e+07 | 1.56e+07 | 1.010 |
+| p = 0.05 | r_sig(V = 0.995) | 2.332e+07 | 2.28e+07 | 1.023 |
+| p = 0.05 | V_min | 0.8534 | 0.854 | 0.999 |
+| p = 0.1 | r_sig(V = 0.9) | 4.724e+06 | 4.7e+06 | 1.005 |
+| p = 0.1 | r_sig(V = 0.96) | 1.173e+07 | 1.17e+07 | 1.003 |
+| p = 0.1 | r_sig(V = 0.995) | 1.726e+07 | 1.71e+07 | 1.009 |
+| p = 0.1 | V_min | 0.8511 | 0.8517 | 0.999 |
+| p = 0.15 | r_sig(V = 0.9) | 3.484e+06 | 3.47e+06 | 1.004 |
+| p = 0.15 | r_sig(V = 0.96) | 8.571e+06 | 8.51e+06 | 1.007 |
+| p = 0.15 | r_sig(V = 0.995) | 1.259e+07 | 1.24e+07 | 1.015 |
+| p = 0.15 | V_min | 0.8503 | 0.851 | 0.999 |
+
+**Fig. 5: rate at fixed V (solid: p = 0, dashed: the legend's p), and V_min printed in the caption**
+
+| curve | quantity | code | paper (read) | code / paper |
+|---|---|---|---|---|
+| n = 1e+10, p = 0 | r_sig(V = 0.9) | 7.233e+06 | 7.13e+06 | 1.014 |
+| n = 1e+10, p = 0 | r_sig(V = 0.95) | 1.85e+07 | 1.84e+07 | 1.006 |
+| n = 1e+10, p = 0 | r_sig(V = 0.995) | 3.264e+07 | 3.21e+07 | 1.017 |
+| n = 1e+10, p = 0 | V_min | 0.8619 | 0.8622 | 1.000 |
+| n = 1e+10, p = 0.155 | r_sig(V = 0.9) | 3.372e+06 | 3.38e+06 | 0.998 |
+| n = 1e+10, p = 0.155 | r_sig(V = 0.95) | 7.38e+06 | 7.31e+06 | 1.010 |
+| n = 1e+10, p = 0.155 | r_sig(V = 0.995) | 1.218e+07 | 1.2e+07 | 1.015 |
+| n = 1e+10, p = 0.155 | V_min | 0.8503 | 0.8508 | 0.999 |
+| n = 1e+09, p = 0 | r_sig(V = 0.9) | 6.065e+05 | 5.92e+05 | 1.024 |
+| n = 1e+09, p = 0 | r_sig(V = 0.995) | 3.099e+06 | 3.06e+06 | 1.013 |
+| n = 1e+09, p = 0 | V_min | 0.8681 | 0.8686 | 0.999 |
+| n = 1e+09, p = 0.09 | r_sig(V = 0.9) | 4.116e+05 | 4.05e+05 | 1.016 |
+| n = 1e+09, p = 0.09 | r_sig(V = 0.995) | 1.715e+06 | 1.69e+06 | 1.015 |
+| n = 1e+09, p = 0.09 | V_min | 0.8601 | 0.8608 | 0.999 |
+| n = 1e+08, p = 0 | r_sig(V = 0.95) | 1.424e+05 | 1.4e+05 | 1.017 |
+| n = 1e+08, p = 0 | r_sig(V = 0.995) | 2.741e+05 | 2.7e+05 | 1.015 |
+| n = 1e+08, p = 0 | V_min | 0.8827 | 0.8835 | 0.999 |
+| n = 1e+08, p = 0.035 | r_sig(V = 0.95) | 1.146e+05 | 1.15e+05 | 0.996 |
+| n = 1e+08, p = 0.035 | r_sig(V = 0.995) | 2.099e+05 | 2.13e+05 | 0.985 |
+| n = 1e+08, p = 0.035 | V_min | 0.8789 | 0.8799 | 0.999 |
+
+**Fig. 6 (STANDARD protocol): rate at fixed n, and n at which a given rate is reached**
+
+| curve | quantity | code | paper (read) | code / paper |
+|---|---|---|---|---|
+| nadlinger | r_sig(n = 1e+08) | 3.421e+05 | 3.57e+05 | 0.958 |
+| nadlinger | r_sig(n = 1e+09) | 3.866e+06 | 4e+06 | 0.967 |
+| nadlinger | n at r_sig = 1e+02 | 1.005e+06 | 8.69e+05 | 1.157 |
+| nadlinger | n at r_sig = 1e+03 | 1.511e+06 | 1.28e+06 | 1.181 |
+| nadlinger | n at r_sig = 1e+04 | 5.177e+06 | 4.82e+06 | 1.074 |
+| nadlinger | n at r_sig = 1e+05 | 3.294e+07 | 3.12e+07 | 1.056 |
+| zhang | r_sig(n = 1e+08) | 4.415e+04 | 4.81e+04 | 0.918 |
+| zhang | r_sig(n = 1e+09) | 8.321e+05 | 8.65e+05 | 0.962 |
+| zhang | n at r_sig = 1e+02 | 2.583e+07 | 2.24e+07 | 1.153 |
+| zhang | n at r_sig = 1e+03 | 2.796e+07 | 2.44e+07 | 1.146 |
+| zhang | n at r_sig = 1e+04 | 4.603e+07 | 4.18e+07 | 1.101 |
+| zhang | n at r_sig = 1e+05 | 1.758e+08 | 1.66e+08 | 1.059 |
+| lu | r_sig(n = 1e+08) | 2.227e+05 | 2.31e+05 | 0.964 |
+| lu | r_sig(n = 1e+09) | 2.644e+06 | 2.76e+06 | 0.958 |
+| lu | n at r_sig = 1e+02 | 2.231e+06 | 1.92e+06 | 1.162 |
+| lu | n at r_sig = 1e+04 | 8.534e+06 | 7.9e+06 | 1.080 |
+| lu | n at r_sig = 1e+05 | 4.962e+07 | 4.67e+07 | 1.062 |
+
+**Fig. 7 (CALIBRATED model, see README): rate at fixed L**
+
+| curve | quantity | code | paper (read) | code / paper |
+|---|---|---|---|---|
+| ideal, N = 1e+14 | r_sig(L = 1 km) | 1.434e+06 | 1.51e+06 | 0.950 |
+| ideal, N = 1e+14 | r_sig(L = 5 km) | 1.181e+06 | 1.19e+06 | 0.992 |
+| ideal, N = 1e+14 | r_sig(L = 10 km) | 9.244e+05 | 9.17e+05 | 1.008 |
+| ideal, N = 1e+14 | r_sig(L = 20 km) | 5.635e+05 | 6.11e+05 | 0.922 |
+| ideal, N = 1e+14 | r_sig(L = 25 km) | 4.384e+05 | 4.66e+05 | 0.941 |
+| ideal, N = 1e+14 | r_sig(L = 40 km) | 2.027e+05 | 2.02e+05 | 1.004 |
+| ideal, N = 1e+14 | r_sig(L = 60 km) | 6.792e+04 | 6.34e+04 | 1.071 |
+| ideal, N = 1e+14 | r_sig(L = 80 km) | 1.952e+04 | 1.7e+04 | 1.148 |
+| ideal, N = 1e+14 | r_sig(L = 100 km) | 3379 | 2860 | 1.182 |
+| ideal, N = 1e+14 | cutoff (km) | 111.46 | 111.46 | 1.0000 |
+| ideal, N = 2e+14 | r_sig(L = 1 km) | 2.986e+06 | 3.1e+06 | 0.963 |
+| ideal, N = 2e+14 | r_sig(L = 5 km) | 2.466e+06 | 2.5e+06 | 0.986 |
+| ideal, N = 2e+14 | r_sig(L = 10 km) | 1.94e+06 | 1.89e+06 | 1.026 |
+| ideal, N = 2e+14 | r_sig(L = 20 km) | 1.195e+06 | 1.29e+06 | 0.926 |
+| ideal, N = 2e+14 | r_sig(L = 25 km) | 9.358e+05 | 9.92e+05 | 0.943 |
+| ideal, N = 2e+14 | r_sig(L = 40 km) | 4.44e+05 | 4.41e+05 | 1.007 |
+| ideal, N = 2e+14 | r_sig(L = 60 km) | 1.577e+05 | 1.44e+05 | 1.095 |
+| ideal, N = 2e+14 | r_sig(L = 80 km) | 5.148e+04 | 5.23e+04 | 0.984 |
+| ideal, N = 2e+14 | r_sig(L = 100 km) | 1.386e+04 | 1.37e+04 | 1.012 |
+| ideal, N = 2e+14 | r_sig(L = 110 km) | 6102 | 6010 | 1.015 |
+| ideal, N = 2e+14 | r_sig(L = 120 km) | 1663 | 1270 | 1.310 |
+| ideal, N = 2e+14 | cutoff (km) | 126.71 | 126.53 | 1.0014 |
+| real, N = 1e+14 | r_sig(L = 1 km) | 7.543e+04 | 9.41e+04 | 0.802 |
+| real, N = 1e+14 | r_sig(L = 5 km) | 5.071e+04 | 6.27e+04 | 0.809 |
+| real, N = 1e+14 | r_sig(L = 10 km) | 2.652e+04 | 2.98e+04 | 0.890 |
+| real, N = 1e+14 | r_sig(L = 15 km) | 8196 | 6810 | 1.204 |
+| real, N = 1e+14 | cutoff (km) | 17.82 | 17.82 | 1.0000 |
+| real, N = 2e+14 | r_sig(L = 1 km) | 2.098e+05 | 2.74e+05 | 0.766 |
+| real, N = 2e+14 | r_sig(L = 5 km) | 1.591e+05 | 2.02e+05 | 0.788 |
+| real, N = 2e+14 | r_sig(L = 10 km) | 1.078e+05 | 1.26e+05 | 0.856 |
+| real, N = 2e+14 | r_sig(L = 15 km) | 6.808e+04 | 7.26e+04 | 0.938 |
+| real, N = 2e+14 | r_sig(L = 20 km) | 3.738e+04 | 3.65e+04 | 1.024 |
+| real, N = 2e+14 | r_sig(L = 25 km) | 1.399e+04 | 1.18e+04 | 1.185 |
+| real, N = 2e+14 | cutoff (km) | 28.87 | 28.87 | 1.0000 |
+
+Fig. 7 calibration: heralding scale 0.3 (fitted to the printed ideal curves); V_eff(ideal) = 0.9187 (fitted to 111.46 km at N = 1e14); realistic V_eff(L) = 0.8641 - 2.82e-03 (exp(L/2L0) - 1) (fitted to 17.82 and 28.87 km).
+
+**Median |code/paper - 1| per figure** (readings of rate/threshold quantities only)
+
+- fig3: 2.4 %  (max 6.3 %, 18 readings)
+- fig4: 0.8 %  (max 2.3 %, 16 readings)
+- fig5: 1.1 %  (max 2.4 %, 20 readings)
+- fig6: 7.4 %  (max 18.1 %, 17 readings)
+- fig7: 6.7 %  (max 31.0 %, 30 readings)
