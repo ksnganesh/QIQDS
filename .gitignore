@@ -1,0 +1,14 @@
+
+# PNG images
+*.png
+
+# Log files
+*.log
+*.logs
+
+# Python virtual environment
+.venv/
+venv/
+
+# Pytest cache
+.pytest_cache/
